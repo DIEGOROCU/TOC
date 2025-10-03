@@ -16,7 +16,7 @@ end tb_cerrojo;
 
 architecture beh of tb_cerrojo is
     -- Component Declaration for the Unit Under Test (UUT)
-    component cerrojo
+    component cerrojo_sistema
       port (
         rst			: IN  std_logic;
         clk			: IN  std_logic;
@@ -45,7 +45,7 @@ architecture beh of tb_cerrojo is
 begin
 
 	-- Instantiate the Unit Under Test (UUT)
-    UUT : cerrojo
+    UUT : cerrojo_sistema
       port map (
         rst			=> rst,
         clk			=> clk,

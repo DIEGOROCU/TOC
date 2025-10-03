@@ -11,7 +11,6 @@ entity cerrojo_sistema is
     bloqueado : out std_logic_vector (15 downto 0);
     display   : out std_logic_vector (6 downto 0);
     s_display : out std_logic_vector (3 downto 0)
-  
   );
 end cerrojo_sistema;
 
@@ -26,8 +25,7 @@ architecture struct of cerrojo_sistema is
         boton		: IN  std_logic;
         clave 		: IN  std_logic_vector (7 DOWNTO 0);
         bloqueado 	: OUT std_logic_vector (15 DOWNTO 0);
-        display		: OUT std_logic_vector (6 DOWNTO 0);
-        s_display	: OUT std_logic_vector (3 DOWNTO 0)
+        display		: OUT std_logic_vector (3 DOWNTO 0)
       );
     END component;
 
@@ -49,94 +47,38 @@ architecture struct of cerrojo_sistema is
       );
     END component;
 
-    signal estadoActual, estadoSiguiente : estado;
     signal intentos_restantes : std_logic_vector (3 downto 0);
-    signal bloqueado_int : "1111111111111111";
-    signal clave_guardada : std_logic_vector (7 downto 0);
     signal boton_presionado : std_logic;
+    signal bloqueado_salida : std_logic_vector (15 DOWNTO 0);
 
 begin
+
   cerrojo_my: cerrojo
     port map (
-      rst       => rst,
-      clk       => clk,
-      boton     => boton,
-      clave     => clave,
-      bloqueado => bloqueado,
-      display   => display,
-      s_display => s_display
+      rst         => rst,
+      clk         => clk,
+      boton       => boton_presionado,
+      clave       => clave,
+      bloqueado   => bloqueado_salida,
+      display     => intentos_restantes
     );
 
-    conv_7seg_my: conv_7seg
-      port map (
-        intentos_restantes       => "1000",
-        display => display
-      );
+  conv_7seg_my: conv_7seg
+    port map (
+      x         => intentos_restantes,
+      display   => display
+    );
 
-    debouncer_my: debouncer
-      port map (
-        rst => rst,
-        clk => clk,
-        x => boton,
-        xDeb => open,
-        xDebFallingEdge => open,
-        xDebRisingEdge => boton_presionado
-      );
-
-    SYNC: process(clk, rst)
-      begin
-        if (rst = '1') then
-          estadoActual <= abierto_est;
-          bloqueado_int <= (others => '1');
-          clave_guardada <= (others => '0');
-        elsif rising_edge(clk) then
-          estadoActual <= estadoSiguiente;
-          bloqueado_int <= bloqueado;
-        end if;
-      end process SYNC;
-
-
-      COMB: process(boton, clave, bloqueado_int, clave_guardada, estadoActual, estadoSiguiente)
-      begin
-
-        estadoSiguiente <= estadoActual;
-        bloqueado_int <= bloqueado;
-
-        case estadoActual is
-          when abierto_est =>
-            if (boton_presionado = '1') then
-              estadoSiguiente <= intentos_3_est;
-              clave_guardada <= clave;
-            end if;
-          when intentos_1_est =>
-            if (boton_presionado = '1') then
-              if (clave = clave_guardada) then
-                estadoSiguiente <= abierto_est;
-              else
-                estadoSiguiente <= intentos_2_est;
-              end if;
-            end if;
-          when intentos_2_est =>
-            if (boton_presionado = '1') then
-              if (clave = clave_guardada) then
-                estadoSiguiente <= abierto_est;
-              else
-                estadoSiguiente <= intentos_1_est;
-              end if;
-            end if;
-          when intentos_3_est =>
-            if (boton_presionado = '1') then
-              if (clave = clave_guardada) then
-                estadoSiguiente <= abierto_est;
-              else
-                estadoSiguiente <= bloqueado_est;
-              end if;
-            end if;
-          when bloqueado_est =>
-            if (clave = clave_guardada) then
-              estadoSiguiente <= abierto_est;
-            end if;
-        end case;
-      end process COMB;
+  debouncer_my: debouncer
+    port map (
+      rst => rst,
+      clk => clk,
+      x => boton,
+      xDeb => open,
+      xDebFallingEdge => open,
+      xDebRisingEdge => boton_presionado
+    );
+  bloqueado <= bloqueado_salida;
+  s_display <= "1110"; -- Activamos solo el primer display
 
 end struct;
