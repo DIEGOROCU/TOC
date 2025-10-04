@@ -47,28 +47,44 @@ begin
             if (boton = '1') then
               estadoSiguiente <= intentos_3_est;
             end if;
-          when intentos_1_est =>
+          when intentos_3_est =>
             display <= "0011"; -- 3 intentos restantes
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1' and clave /= clave_guardada) then
-              estadoSiguiente <= intentos_2_est;
+            if (boton = '1') then
+              if (clave /= clave_guardada) then
+                estadoSiguiente <= intentos_2_est;
+              else
+                estadoSiguiente <= abierto_est;
+              end if;
             end if;
           when intentos_2_est =>
             display <= "0010"; -- 2 intentos restantes
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1' and clave /= clave_guardada) then
-              estadoSiguiente <= intentos_1_est;
+            if (boton = '1') then
+              if (clave /= clave_guardada) then
+                estadoSiguiente <= intentos_1_est;
+              else
+                estadoSiguiente <= abierto_est;
+              end if;
             end if;
-          when intentos_3_est =>
+          when intentos_1_est =>
             display <= "0001"; -- 1 intento restante
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1' and clave /= clave_guardada) then
-              estadoSiguiente <= bloqueado_est;
+            if (boton = '1') then
+              if (clave /= clave_guardada) then
+                estadoSiguiente <= bloqueado_est;
+              else
+                estadoSiguiente <= abierto_est;
+              end if;
             end if;
           when bloqueado_est =>
             display <= "0000"; -- 0 intentos restantes
             bloqueado <= (others => '0'); -- Bloqueado
-            estadoSiguiente <= bloqueado_est; -- Permanecer bloqueado
+            if (boton = '1' and clave = clave_guardada) then
+              estadoSiguiente <= abierto_est;
+            else
+              estadoSiguiente <= bloqueado_est; -- Permanecer bloqueado
+            end if;
         end case;
       end process COMB;
 
