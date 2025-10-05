@@ -50,7 +50,7 @@ architecture struct of cerrojo_sistema is
     signal intentos_restantes : std_logic_vector (3 downto 0);
     signal boton_presionado : std_logic;
     signal bloqueado_salida : std_logic_vector (15 DOWNTO 0);
-    signal salidaProcesada : std_logic_vector (6 downto 0);
+    signal display_salida : std_logic_vector (6 downto 0);
 
 begin
 
@@ -58,7 +58,8 @@ begin
     port map (
       rst         => rst,
       clk         => clk,
-      boton       => boton_presionado,
+      --boton       => boton_presionado,  -- Esto hay que descomentar en hardware y comentar en simulacion
+      boton       => boton, -- esto hay que comentar en hardware y descomentar en simulacion
       clave       => clave,
       bloqueado   => bloqueado_salida,
       display     => intentos_restantes
@@ -67,7 +68,7 @@ begin
   conv_7seg_my: conv_7seg
     port map (
       x         => intentos_restantes,
-      display   => salidaProcesada
+      display   => display_salida
     );
 
   debouncer_my: debouncer
@@ -80,7 +81,7 @@ begin
       xDebRisingEdge => boton_presionado
     );
   bloqueado <= bloqueado_salida;
-  s_display <= intentos_restantes;
-  display <= salidaProcesada;
+  s_display <= "1110"; -- Activamos solo el primer display
+  display <= display_salida;
 
 end struct;

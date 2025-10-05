@@ -18,6 +18,7 @@ architecture Behavioral of cerrojo is
     type estado is (abierto_est, intentos_3_est, intentos_2_est, intentos_1_est, bloqueado_est);
     signal estadoActual, estadoSiguiente : estado;
     signal clave_guardada : std_logic_vector (7 downto 0);
+    signal boton_presionado : std_logic;
 
 begin
 
@@ -26,8 +27,10 @@ begin
         if (rst = '1') then
           estadoActual <= abierto_est;
           clave_guardada <= (others => '0');
+          boton_presionado <= '0';
         elsif rising_edge(clk) then
           estadoActual <= estadoSiguiente;
+          boton_presionado <= boton; -- Sincronizar el boton
           if (boton = '1' and estadoActual = abierto_est) then
             clave_guardada <= clave; -- Guardar la clave ingresada
           end if;
@@ -35,58 +38,47 @@ begin
       end process SYNC;
 
 
-      COMB: process(boton, clave, clave_guardada, estadoActual)
+      COMB: process(boton_presionado, clave, clave_guardada, estadoActual)
       begin
 
-        estadoSiguiente <= abierto_est; -- Valor por defecto
+        estadoSiguiente <= estadoActual; -- Por defecto, permanecer en el mismo estado
 
         case estadoActual is
           when abierto_est =>
             display <= "0011"; -- 3 intentos restantes
             bloqueado <= (others => '1'); -- Desbloqueado
-            if (boton = '1') then
+            if (boton_presionado = '1') then
               estadoSiguiente <= intentos_3_est;
             end if;
           when intentos_3_est =>
             display <= "0011"; -- 3 intentos restantes
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1') then
-              if (clave /= clave_guardada) then
-                estadoSiguiente <= intentos_2_est;
-              else
-                estadoSiguiente <= abierto_est;
-              end if;
+            if (boton_presionado = '1' and clave /= clave_guardada) then
+              estadoSiguiente <= intentos_2_est;
+            elsif (boton_presionado = '1') then
+              estadoSiguiente <= abierto_est; -- Volver a abierto si la clave es correcta              
             end if;
           when intentos_2_est =>
             display <= "0010"; -- 2 intentos restantes
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1') then
-              if (clave /= clave_guardada) then
-                estadoSiguiente <= intentos_1_est;
-              else
-                estadoSiguiente <= abierto_est;
-              end if;
+            if (boton_presionado = '1' and clave /= clave_guardada) then
+              estadoSiguiente <= intentos_1_est;
+            elsif (boton_presionado = '1') then
+              estadoSiguiente <= abierto_est; -- Volver a abierto si la clave es correcta              
             end if;
           when intentos_1_est =>
             display <= "0001"; -- 1 intento restante
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1') then
-              if (clave /= clave_guardada) then
-                estadoSiguiente <= bloqueado_est;
-              else
-                estadoSiguiente <= abierto_est;
-              end if;
+            if (boton_presionado = '1' and clave /= clave_guardada) then
+              estadoSiguiente <= bloqueado_est;
+            elsif (boton_presionado = '1') then
+              estadoSiguiente <= abierto_est; -- Volver a abierto si la clave es correcta              
             end if;
           when bloqueado_est =>
             display <= "0000"; -- 0 intentos restantes
             bloqueado <= (others => '0'); -- Bloqueado
-            if (boton = '1' and clave = clave_guardada) then
-              estadoSiguiente <= abierto_est;
-            else
-              estadoSiguiente <= bloqueado_est; -- Permanecer bloqueado
-            end if;
+            estadoSiguiente <= bloqueado_est; -- Permanecer bloqueado
         end case;
       end process COMB;
 
 end Behavioral;
-

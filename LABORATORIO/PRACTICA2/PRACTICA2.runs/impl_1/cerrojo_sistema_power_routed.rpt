@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Sat Oct  4 12:34:17 2025
-| Host             : DESKTOP-UM0HR61 running 64-bit major release  (build 9200)
+| Date             : Sun Oct  5 13:44:38 2025
+| Host             : SENTINEL running 64-bit major release  (build 9200)
 | Command          : report_power -file cerrojo_sistema_power_routed.rpt -pb cerrojo_sistema_power_summary_routed.pb -rpx cerrojo_sistema_power_routed.rpx
 | Design           : cerrojo_sistema
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.073        |
+| Total On-Chip Power (W)  | 0.092        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.001        |
+| Dynamic (W)              | 0.020        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,15 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      106 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       48 |     20800 |            0.23 |
-|   CARRY4       |    <0.001 |        6 |      8150 |            0.07 |
-|   Register     |    <0.001 |       38 |     41600 |            0.09 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |       83 |       --- |             --- |
-| I/O            |    <0.001 |       38 |       106 |           35.85 |
+| Slice Logic    |    <0.001 |       34 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       13 |     20800 |            0.06 |
+|   Register     |    <0.001 |       12 |     41600 |            0.03 |
+|   Others       |     0.000 |        3 |       --- |             --- |
+| Signals        |    <0.001 |       38 |       --- |             --- |
+| I/O            |     0.020 |       38 |       106 |           35.85 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.073 |          |           |                 |
+| Total          |     0.092 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +70,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.010 |       0.001 |      0.010 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,7 +139,7 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| cerrojo_sistema |     0.001 |
+| cerrojo_sistema |     0.020 |
 +-----------------+-----------+
 
 

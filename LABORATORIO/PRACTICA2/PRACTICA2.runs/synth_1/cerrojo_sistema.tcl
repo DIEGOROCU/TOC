@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/synth_1/cerrojo_sistema.tcl"
+  variable script "C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/synth_1/cerrojo_sistema.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,20 +76,20 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.cache/wt [current_project]
-set_property parent.project_path C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.cache/wt [current_project]
+set_property parent.project_path C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo c:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.cache/ip [current_project]
+set_property ip_output_repo c:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/new/cerrojo.vhd
-  C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/imports/Downloads/conv_7seg.vhd
-  C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/imports/Downloads/debouncer.vhd
-  C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/new/cerrojo_sistema.vhd
+  C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/new/cerrojo.vhd
+  C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/imports/Downloads/conv_7seg.vhd
+  C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/imports/Downloads/debouncer.vhd
+  C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/new/cerrojo_sistema.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -100,12 +100,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/constrs_1/new/pins.xdc
-set_property used_in_implementation false [get_files C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/constrs_1/new/pins.xdc]
+read_xdc C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/constrs_1/new/pins.xdc
+set_property used_in_implementation false [get_files C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/constrs_1/new/pins.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/utils_1/imports/synth_1/cerrojo_sistema.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/utils_1/imports/synth_1/cerrojo_sistema.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
