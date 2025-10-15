@@ -8,6 +8,7 @@ entity cerrojo_sistema is
     clk       : in  std_logic;
     boton     : in  std_logic;
     clave     : in  std_logic_vector (7 downto 0);
+    num_intentos : in  std_logic_vector (3 downto 0);
     bloqueado : out std_logic_vector (15 downto 0);
     display   : out std_logic_vector (6 downto 0);
     s_display : out std_logic_vector (3 downto 0)
@@ -24,6 +25,7 @@ architecture struct of cerrojo_sistema is
         clk			: IN  std_logic;
         boton		: IN  std_logic;
         clave 		: IN  std_logic_vector (7 DOWNTO 0);
+        num_intentos : IN  std_logic_vector (3 DOWNTO 0); -- Numero de intentos inicial
         bloqueado 	: OUT std_logic_vector (15 DOWNTO 0);
         display		: OUT std_logic_vector (3 DOWNTO 0)
       );
@@ -61,6 +63,7 @@ begin
       --boton       => boton_presionado,  -- Esto hay que descomentar en hardware y comentar en simulacion
       boton       => boton, -- esto hay que comentar en hardware y descomentar en simulacion
       clave       => clave,
+      num_intentos => num_intentos,
       bloqueado   => bloqueado_salida,
       display     => intentos_restantes
     );
