@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Sun Oct  5 13:44:01 2025
-| Host         : SENTINEL running 64-bit major release  (build 9200)
+| Date         : Sun Oct  5 15:55:22 2025
+| Host         : DESKTOP-UM0HR61 running 64-bit major release  (build 9200)
 | Command      : report_drc -file cerrojo_sistema_drc_opted.rpt -pb cerrojo_sistema_drc_opted.pb -rpx cerrojo_sistema_drc_opted.rpx
 | Design       : cerrojo_sistema
 | Device       : xc7a35tcpg236-1

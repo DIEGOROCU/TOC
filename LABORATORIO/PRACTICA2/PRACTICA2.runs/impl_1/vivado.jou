@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sun Oct  5 13:43:15 2025
-# Process ID: 26640
-# Current directory: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1
+# Start of session at: Sun Oct  5 15:54:37 2025
+# Process ID: 21272
+# Current directory: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1
 # Command line: vivado.exe -log cerrojo_sistema.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source cerrojo_sistema.tcl -notrace
-# Log file: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1/cerrojo_sistema.vdi
-# Journal file: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1\vivado.jou
-# Running On: SENTINEL, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 4, Host memory: 34052 MB
+# Log file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1/cerrojo_sistema.vdi
+# Journal file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1\vivado.jou
+# Running On: DESKTOP-UM0HR61, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 10, Host memory: 16866 MB
 #-----------------------------------------------------------
 source cerrojo_sistema.tcl -notrace
