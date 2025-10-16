@@ -3,9 +3,15 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+<<<<<<< HEAD
 # Start of session at: Sun Oct  5 15:54:37 2025
 # Process ID: 21272
 # Current directory: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1
+=======
+# Start of session at: Sun Oct  5 16:50:53 2025
+# Process ID: 4216
+# Current directory: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1
+>>>>>>> 35024e1a28bdfc7486858aa30b989e0943f30b6d
 # Command line: vivado.exe -log cerrojo_sistema.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source cerrojo_sistema.tcl -notrace
 # Log file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1/cerrojo_sistema.vdi
 # Journal file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1\vivado.jou
