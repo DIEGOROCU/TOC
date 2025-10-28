@@ -33,7 +33,7 @@ use IEEE.numeric_std.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mult8b is
+entity mult8b1 is
 
     port ( 
         X : in  std_logic_vector(3 downto 0);
@@ -41,9 +41,9 @@ entity mult8b is
         Z : out std_logic_vector(7 downto 0) 
     );
 
-end mult8b;
+end mult8b1;
 
-architecture Behavioral of mult8b is
+architecture Behavioral of mult8b1 is
 
 begin
 
