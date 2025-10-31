@@ -19,7 +19,7 @@ architecture beh of tb_comparadores is
     component red_iterativa_comparadores
         generic ( 
             num_bits     : natural := 4;
-            num_entradas : natural := 16
+            num_entradas : natural := 4
         );
         port(
             X : in  std_logic_vector (num_entradas*num_bits-1 downto 0);
@@ -30,7 +30,7 @@ architecture beh of tb_comparadores is
     component red_arbol_comparadores
         generic ( 
             num_bits     : natural := 4;
-            num_entradas : natural := 16
+            num_entradas : natural := 4
         );
         port(
             X : in  std_logic_vector (num_entradas*num_bits-1 downto 0);

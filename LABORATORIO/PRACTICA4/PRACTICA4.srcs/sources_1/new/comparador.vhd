@@ -49,7 +49,8 @@ architecture Behavioral of comparador is
 begin
 process (A, B)
     begin
-        if signed(A) <= signed(B) then
+        -- Devolvemos el mayor
+        if signed(A) >= signed(B) then
             S <= A;
         else
             S <= B;

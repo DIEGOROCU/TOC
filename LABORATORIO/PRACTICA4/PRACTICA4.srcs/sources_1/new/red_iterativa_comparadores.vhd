@@ -21,10 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.numeric_std.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -34,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity red_iterativa_comparadores is
     generic (
         num_bits : natural := 4;
-        num_entradas : natural := 16
+        num_entradas : natural := 4
     );
     port(
         X : in std_logic_vector (num_entradas*num_bits-1 downto 0);
@@ -60,7 +57,10 @@ signal aux: C_type;
 
 begin
 
-aux(0) <= (others => '1');
+-- Semilla genérica para reducción cuando buscamos el máximo con comparador (signed):
+-- debemos inicializar con el valor mínimo representable en signed (-2^(num_bits-1)).
+-- Usamos to_signed para crear esa representación con el ancho correcto.
+aux(0) <= std_logic_vector(to_signed(-2**(num_bits-1), num_bits));
 
 gen_celdas: for i in 0 to num_entradas-1 generate
 comparador_i: comparador 

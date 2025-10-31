@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../PRACTICA4.srcs/sources_1/new/comparador.vhd" \
+"../../../../PRACTICA4.srcs/sources_1/new/red_arbol_comparadores.vhd" \
+"../../../../PRACTICA4.srcs/sources_1/new/red_iterativa_comparadores.vhd" \
+"../../../../PRACTICA4.srcs/sim_1/imports/Downloads/tb_comparadores.vhd" \
+
+# Do not sort compile order
+nosort

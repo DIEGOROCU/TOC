@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity red_arbol_comparadores is
     generic (
         num_bits : natural := 4;
-        num_entradas : natural := 16
+        num_entradas : natural := 4
     );
     port(
         X : in std_logic_vector (num_entradas*num_bits-1 downto 0);
