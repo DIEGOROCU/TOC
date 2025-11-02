@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Oct 31 13:28:15 2025
-# Process ID: 14688
+# Start of session at: Sun Nov  2 10:30:26 2025
+# Process ID: 18764
 # Current directory: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA4/PRACTICA4.runs/impl_1
-# Command line: vivado.exe -log red_iterativa_comparadores.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source red_iterativa_comparadores.tcl -notrace
-# Log file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA4/PRACTICA4.runs/impl_1/red_iterativa_comparadores.vdi
+# Command line: vivado.exe -log red_arbol_comparadores.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source red_arbol_comparadores.tcl -notrace
+# Log file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA4/PRACTICA4.runs/impl_1/red_arbol_comparadores.vdi
 # Journal file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA4/PRACTICA4.runs/impl_1\vivado.jou
 # Running On: DESKTOP-UM0HR61, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 10, Host memory: 16866 MB
 #-----------------------------------------------------------
-source red_iterativa_comparadores.tcl -notrace
+source red_arbol_comparadores.tcl -notrace

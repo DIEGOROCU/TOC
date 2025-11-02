@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log red_iterativa_comparadores.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source red_iterativa_comparadores.tcl" );
+         "-log red_arbol_comparadores.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source red_arbol_comparadores.tcl" );
 
 
 

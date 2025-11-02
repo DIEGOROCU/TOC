@@ -26,7 +26,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log red_iterativa_comparadores.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source red_iterativa_comparadores.tcl -notrace" );
+         "-log red_arbol_comparadores.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source red_arbol_comparadores.tcl -notrace" );
 
 
 
