@@ -66,7 +66,7 @@ architecture Behavioral of tragaperrasASM is
 begin
 
     -- Instanciamos los contadores para las ruletas
-    RULETA01: contador10
+    RULETA01_COMP: contador10
         port map (
             clk => clk,
             rst => rst,
@@ -74,7 +74,7 @@ begin
             cuenta10 => cuenta10_01
         );
 
-    RULETA02: contador10
+    RULETA02_COMP: contador10
         port map (
             clk => clk,
             rst => rst,
