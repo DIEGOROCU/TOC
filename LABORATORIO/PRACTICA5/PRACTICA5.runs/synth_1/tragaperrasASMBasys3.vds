@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Nov 16 18:27:18 2025
+# Process ID: 11040
+# Current directory: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.runs/synth_1
+# Command line: vivado.exe -log tragaperrasASMBasys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tragaperrasASMBasys3.tcl
+# Log file: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.runs/synth_1/tragaperrasASMBasys3.vds
+# Journal file: C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.runs/synth_1\vivado.jou
+# Running On: SENTINEL, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 4, Host memory: 34052 MB
+#-----------------------------------------------------------
+source tragaperrasASMBasys3.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 485.352 ; gain = 200.109
+Command: synth_design -top tragaperrasASMBasys3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13544
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1295.738 ; gain = 409.125
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-36] 'unsigned' is not declared [C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.srcs/sources_1/new/contador10.vhd:58]
+ERROR: [Synth 8-11229] type conversion expression type for 'std_logic_vector' cannot be uniquely determined [C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.srcs/sources_1/new/contador10.vhd:58]
+INFO: [Synth 8-11252] unit 'behavioral' is ignored due to previous errors [C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.srcs/sources_1/new/contador10.vhd:68]
+INFO: [Synth 8-10443] VHDL file 'C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA5/PRACTICA5.srcs/sources_1/new/contador10.vhd' is ignored due to errors
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1379.570 ; gain = 492.957
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 16 18:28:21 2025...
