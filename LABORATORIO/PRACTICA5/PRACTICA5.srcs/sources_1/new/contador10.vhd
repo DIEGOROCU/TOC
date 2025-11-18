@@ -13,7 +13,32 @@ end contador10;
 
 architecture Behavioral of contador10 is
     signal cuenta : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+
+    -- Componente divisor existente en el proyecto
+    component divisor is
+        port (
+            rst: in STD_LOGIC;
+            clk: in STD_LOGIC;
+            cuenta_medio_segundo: out STD_LOGIC;
+            cuenta_display1: out STD_LOGIC;
+            cuenta_display2: out STD_LOGIC
+        );
+    end component;
+    signal cuenta_medio_segundo : STD_LOGIC;
+    signal cuenta_display1 : STD_LOGIC;
+    signal cuenta_display2 : STD_LOGIC;
 begin
+
+    -- Instanciar el divisor existente. Usaremos la señal `cuenta_medio_segundo`
+    -- como 'clock-enable' para avanzar el contador periódicamente.
+    div_inst: divisor
+      port map (
+        rst => rst,
+        clk => clk,
+        cuenta_medio_segundo => cuenta_medio_segundo,
+        cuenta_display1 => cuenta_display1,
+        cuenta_display2 => cuenta_display2
+      );
 
     process(clk, rst)
     begin
@@ -21,7 +46,8 @@ begin
             cuenta <= "0000";
 
         elsif rising_edge(clk) then
-            if enable = '1' then
+            -- Avanzar solo cuando el divisor produce el pulso y el enable externo esté activo
+            if enable = '1' and cuenta_medio_segundo = '1' then
                 if cuenta = "1001" then
                     cuenta <= "0000";
                 else
