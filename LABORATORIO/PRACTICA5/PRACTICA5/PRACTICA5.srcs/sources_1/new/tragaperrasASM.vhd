@@ -23,7 +23,7 @@ architecture Behavioral of tragaperrasASM is
     signal estado_actual, estado_siguiente : estado_t;
 
     ----------------------------------------------------------------------------
-    -- Señales de contadores y enables
+    -- Seï¿½ales de contadores y enables
     ----------------------------------------------------------------------------
     signal cuenta10_01, cuenta10_02, cuenta_medio, cuenta_cred : STD_LOGIC_VECTOR (3 downto 0);
     signal enable_01, enable_02, enable_medio, enable_cred : STD_LOGIC;
@@ -49,8 +49,8 @@ architecture Behavioral of tragaperrasASM is
         port (
             clk    : in  STD_LOGIC;
             rst    : in  STD_LOGIC;
-            enable : in  STD_LOGIC;   -- habilita la operación en cada pulso de reloj
-            dir    : in  STD_LOGIC;   -- dirección: '1' = subir (+3), '0' = bajar (-1)
+            enable : in  STD_LOGIC;   -- habilita la operaciï¿½n en cada pulso de reloj
+            dir    : in  STD_LOGIC;   -- direcciï¿½n: '1' = subir (+3), '0' = bajar (-1)
             cuenta_creditos : out STD_LOGIC_VECTOR (3 downto 0)
         );
     end component;
@@ -131,7 +131,7 @@ begin
     end process;
 
     ----------------------------------------------------------------------------
-    -- Proceso combinacional: Lógica del FSM
+    -- Proceso combinacional: Lï¿½gica del FSM
     ----------------------------------------------------------------------------
     COMB_PROCESS: process(estado_actual, inicio, fin, cuenta10_01, cuenta10_02, cuenta_medio)
     begin
