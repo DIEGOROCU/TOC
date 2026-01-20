@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Diego/Practica1/Practica1.srcs/sources_1/imports/Downloads/registro.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'registro'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Diego/Practica1/Practica1.srcs/sim_1/imports/Downloads/tb_registro.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_registro'

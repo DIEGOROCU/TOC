@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA4/PRACTICA4.srcs/sources_1/new/comparador.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'comparador'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA4/PRACTICA4.srcs/sources_1/new/red_iterativa_comparadores.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'red_iterativa_comparadores'
