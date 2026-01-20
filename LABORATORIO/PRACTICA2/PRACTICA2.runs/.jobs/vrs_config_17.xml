@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+<<<<<<< HEAD
+	<Run Id="synth_1" LaunchDir="C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+=======
+	<Run Id="impl_1" LaunchDir="C:/Users/paufr/OneDrive/Escritorio/TOC/LABORATORIO/PRACTICA2/PRACTICA2.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="write_bitstream" ToStepId="write_bitstream"/>
+>>>>>>> 35024e1a28bdfc7486858aa30b989e0943f30b6d
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/new/cerrojo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cerrojo'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/new/cerrojo_sistema.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cerrojo_sistema'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/imports/Downloads/conv_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'conv_7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sources_1/imports/Downloads/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debouncer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/UCM/TOC/TOC/LABORATORIO/PRACTICA2/PRACTICA2.srcs/sim_1/imports/Downloads/tb_cerrojo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_cerrojo'

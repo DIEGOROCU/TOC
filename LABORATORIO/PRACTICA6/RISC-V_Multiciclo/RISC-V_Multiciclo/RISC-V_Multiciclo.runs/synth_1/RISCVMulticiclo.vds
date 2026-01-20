@@ -1,0 +1,298 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Nov 18 09:46:08 2025
+# Process ID: 19264
+# Current directory: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/RISC-V_Multiciclo.runs/synth_1
+# Command line: vivado.exe -log RISCVMulticiclo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCVMulticiclo.tcl
+# Log file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/RISC-V_Multiciclo.runs/synth_1/RISCVMulticiclo.vds
+# Journal file: C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/RISC-V_Multiciclo.runs/synth_1\vivado.jou
+# Running On: DESKTOP-UM0HR61, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 10, Host memory: 16866 MB
+#-----------------------------------------------------------
+source RISCVMulticiclo.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 485.633 ; gain = 197.965
+Command: read_checkpoint -auto_incremental -incremental C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/RISC-V_Multiciclo.srcs/utils_1/imports/synth_1/RISCVMulticiclo.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/RISC-V_Multiciclo.srcs/utils_1/imports/synth_1/RISCVMulticiclo.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top RISCVMulticiclo -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 35024
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 924.445 ; gain = 406.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'RISCVMulticiclo' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/RISCVMulticiclo.vhd:11]
+INFO: [Synth 8-3491] module 'unidadDeControl' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/unidadDeControl.vhd:4' bound to instance 'UC' of component 'unidadDeControl' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/RISCVMulticiclo.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'unidadDeControl' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/unidadDeControl.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'unidadDeControl' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/unidadDeControl.vhd:13]
+INFO: [Synth 8-3491] module 'rutaDeDatos' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:4' bound to instance 'RD' of component 'rutaDeDatos' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/RISCVMulticiclo.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'rutaDeDatos' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:13]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_PC' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:17]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'registro' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:17]
+INFO: [Synth 8-3491] module 'multiplexor2a1' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor2a1.vhd:4' bound to instance 'mux_AddrSrc' of component 'multiplexor2a1' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'multiplexor2a1' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor2a1.vhd:16]
+	Parameter bits_entradas bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplexor2a1' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor2a1.vhd:16]
+INFO: [Synth 8-3491] module 'memoria' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/memoria.vhd:4' bound to instance 'mem' of component 'memoria' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'memoria' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/memoria.vhd:15]
+INFO: [Synth 8-3491] module 'BlockRam' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/BlockRam.vhd:5' bound to instance 'mem' of component 'BlockRam' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/memoria.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'BlockRam' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/BlockRam.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'BlockRam' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/BlockRam.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'memoria' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/memoria.vhd:15]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_IR' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:152]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_OldPC' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:154]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_MDR' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:156]
+INFO: [Synth 8-3491] module 'extesnionDeSigno' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/extensionDeSigno.vhd:4' bound to instance 'extesnionDeSigno_i' of component 'extesnionDeSigno' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'extesnionDeSigno' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/extensionDeSigno.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'extesnionDeSigno' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/extensionDeSigno.vhd:11]
+INFO: [Synth 8-3491] module 'bancoDeRegistros' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/bancoDeRegistros.vhd:5' bound to instance 'banco_registros' of component 'bancoDeRegistros' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'bancoDeRegistros' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/bancoDeRegistros.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'bancoDeRegistros' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/bancoDeRegistros.vhd:19]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_A' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:162]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_B' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:164]
+INFO: [Synth 8-3491] module 'multiplexor4a1' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor4a1.vhd:4' bound to instance 'mux_opA' of component 'multiplexor4a1' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'multiplexor4a1' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor4a1.vhd:18]
+	Parameter bits_entradas bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplexor4a1' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor4a1.vhd:18]
+INFO: [Synth 8-3491] module 'multiplexor4a1' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor4a1.vhd:4' bound to instance 'mux_opB' of component 'multiplexor4a1' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:168]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/ALU.vhd:5' bound to instance 'ALU_i' of component 'ALU' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/ALU.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/ALU.vhd:18]
+INFO: [Synth 8-3491] module 'registro' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/registro.vhd:4' bound to instance 'reg_ALUout' of component 'registro' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:172]
+INFO: [Synth 8-3491] module 'multiplexor4a1' declared at 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/multiplexor4a1.vhd:4' bound to instance 'mux_ResSrc' of component 'multiplexor4a1' [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:174]
+INFO: [Synth 8-256] done synthesizing module 'rutaDeDatos' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/rutaDeDatos.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'RISCVMulticiclo' (0#1) [C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/ficheros/RISCVMulticiclo.vhd:11]
+WARNING: [Synth 8-7129] Port ADDR[31] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[30] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[29] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[28] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[27] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[26] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[25] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[24] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[23] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[22] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[21] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[20] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[19] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[18] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[17] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[16] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[15] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[14] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[13] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[12] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[11] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[1] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[0] in module memoria is either unconnected or has no load
+WARNING: [Synth 8-7129] Port estado[11] in module unidadDeControl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port estado[10] in module unidadDeControl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port estado[9] in module unidadDeControl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port estado[8] in module unidadDeControl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1019.836 ; gain = 501.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1019.836 ; gain = 501.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1019.836 ; gain = 501.633
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-802] inferred FSM for state register 'currentState_reg' in module 'unidadDeControl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                    0000000000001 |                             0000
+                   s0bis |                    0000000000010 |                             0001
+                      s1 |                    0000000000100 |                             0010
+                      s2 |                    0000000001000 |                             0011
+                      s3 |                    0000000010000 |                             0100
+                   s3bis |                    0000000100000 |                             0101
+                      s4 |                    0000001000000 |                             0110
+                      s5 |                    0000010000000 |                             0111
+                      s8 |                    0000100000000 |                             1010
+                      s6 |                    0001000000000 |                             1000
+                      s9 |                    0010000000000 |                             1011
+                      s7 |                    0100000000000 |                             1001
+                     s10 |                    1000000000000 |                             1100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'currentState_reg' using encoding 'one-hot' in module 'unidadDeControl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1019.836 ; gain = 501.633
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 40    
++---RAMs : 
+	              16K Bit	(512 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 7     
+	   4 Input   32 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 1     
+	  13 Input   18 Bit        Muxes := 1     
+	  13 Input   13 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 2     
+	   4 Input   13 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 33    
+	   3 Input    1 Bit        Muxes := 1     
+	  13 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[12]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[11]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[10]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[9]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[8]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[7]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[6]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[5]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[4]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[3]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[2]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[1]) is unused and will be removed from module RISCVMulticiclo.
+WARNING: [Synth 8-3332] Sequential element (UC/FSM_onehot_currentState_reg[0]) is unused and will be removed from module RISCVMulticiclo.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:22 . Memory (MB): peak = 1207.246 ; gain = 689.043
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1207.246 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.961 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 31fd37a4
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:34 . Memory (MB): peak = 1307.961 ; gain = 797.461
+INFO: [Common 17-1381] The checkpoint 'C:/UCM/TOC/TOC/LABORATORIO/PRACTICA6/RISC-V_Multiciclo/RISC-V_Multiciclo/RISC-V_Multiciclo.runs/synth_1/RISCVMulticiclo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file RISCVMulticiclo_utilization_synth.rpt -pb RISCVMulticiclo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 18 09:48:03 2025...
