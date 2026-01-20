@@ -1,0 +1,63 @@
+# Xilinx Vivado / ISE: ignorar artefactos generados
+# Conservamos el código fuente (.vhd, .v, testbenches), restricciones (.xdc) y proyectos (.xpr)
+
+# Directorios generados por Vivado
+**/.Xil/**
+**/.ipcache/**
+**/*.cache/**
+**/*.hw/**
+**/*.ip_user_files/**
+**/*.runs/**
+**/*.sim/**
+**/.jobs/**
+
+# Salidas de xsim y simulación
+**/xsim/**
+**/behav/**/xsim/**
+
+# Logs y ficheros de estado de Vivado
+**/vivado.jou
+**/vivado.log
+**/vivado.pb
+**/.Vivado_Synthesis.queue.rst
+**/.Vivado_Implementation.queue.rst
+**/.vivado.begin.rst
+**/.vivado.end.rst
+**/.init_design.begin.rst
+**/.init_design.end.rst
+**/.opt_design.begin.rst
+**/.opt_design.end.rst
+**/.place_design.begin.rst
+**/.place_design.end.rst
+**/.phys_opt_design.begin.rst
+**/.phys_opt_design.end.rst
+**/.route_design.begin.rst
+**/.route_design.end.rst
+**/.write_bitstream.begin.rst
+**/.write_bitstream.end.rst
+
+# Scripts/archivos autogenerados de los runs
+**/runme.*
+**/rundef.js
+**/gen_run.xml
+**/htr.txt
+**/__synthesis_is_complete__
+
+# Checkpoints, reports y otros artefactos
+*.dcp
+*.rpt
+*.rpx
+*.pb
+*.wdf
+*.wpc
+*.vds
+*.wdb
+*.wcfg
+
+# Backups y temporales
+*_backup.*
+*.backup.*
+
+# NO ignoramos bitstreams por si quieres distribuirlos
+# (si prefieres ignorarlos, descomenta la siguiente línea)
+# *.bit
